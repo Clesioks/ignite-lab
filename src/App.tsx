@@ -1,5 +1,11 @@
+import Event from './Pages/Event';
+
 function App() {
-  return <h1 className="title">Hello World</h1>;
+  return (
+    <div>
+      <Event />
+    </div>
+  );
 }
 
 export default App;
