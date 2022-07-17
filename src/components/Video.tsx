@@ -1,13 +1,21 @@
+import { DefaultUi, Player, Youtube } from '@vime/react';
 import { CaretRight, FileArrowDown } from 'phosphor-react';
 import BotaoAzul from './BotaoAzul';
 import BotaoVerde from './BotaoVerde';
 import FooterLogo from './FooterLogo';
 
+import '@vime/core/themes/default.css';
+
 export default function Video() {
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
-        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video"></div>
+        <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
+          <Player>
+            <Youtube videoId="fSlsyXjG39E" />
+            <DefaultUi />
+          </Player>
+        </div>
       </div>
 
       <div className="p-8 max-w-[1100px] mx-auto">
@@ -85,7 +93,7 @@ export default function Video() {
           </a>
         </div>
       </div>
-      <footer className="flex border-t-2 mb-3 mt-10">
+      <footer className="flex justify-center border-t-2 mb-3 mt-10">
         <div className="mt-2">
           <FooterLogo />
         </div>
